@@ -502,7 +502,7 @@ function Router() {
 }
 
 function App() {
-  return <WouterRouter><ErrorBoundary><Router /></ErrorBoundary></WouterRouter>;
+  return <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><ErrorBoundary><Router /></ErrorBoundary></WouterRouter>;
 }
 
 export default App;
